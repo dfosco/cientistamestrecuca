@@ -1,0 +1,143 @@
+.zephyr-ad {
+display: inline-block;
+text-align: center;
+width: 60px;
+}
+.zephyr-ad img {
+display: block;
+}
+.clearfix {
+clear:both;
+}
+	.zephyr-ad input {
+	
+	}
+	#TB_ajaxContent.zephyr-tb {
+	padding: 0;
+	position: relative;
+	background: #fff;
+	}
+	#TB_ajaxContent.zephyr-tb p{
+	padding: 0;
+	}
+	#TB_ajaxContent.zephyr-tb p.submit {
+	margin-left:160px;
+	}
+	#zephyr-generator-tabs {
+	padding: 0;
+	border: none;
+	position: relative;
+	min-height:100%;
+	}
+	#zephyr-generator-controls {
+	position: absolute;
+	height: 100%;
+	 padding-top: 0;
+	 padding-bottom: 0;
+	}
+	#TB_window #zephyr-generator-controls li {
+	margin: 0;
+	}
+	#TB_window #zephyr-generator-controls li.ui-tabs-active {
+	padding-right: 0;
+	border-right: 0;
+	}
+		#TB_window #zephyr-generator-controls li a {
+		width: 80%;
+		color: #fff;
+		padding: 8px 10%;
+		font-family: "Open Sans",sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18px;
+		position: relative;
+		outline: none;
+		}
+		#TB_window #zephyr-generator-controls li.ui-tabs-active a, #TB_window #zephyr-generator-controls li:hover a {
+		color: #222;
+		}
+	#TB_window #zephyr-generator-controls li.ui-tabs-active a:after {
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 9px 10px 9px 0;
+	border-color: transparent #ffffff transparent;
+    content: "";
+    margin-top: -8px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    }
+    .button.cfss {
+    outline: none;
+    }
+    .button.cfss.act {
+    font-weight: bold;
+    }
+    .wp-media-buttons .button.cfss:active {
+	margin-bottom: 4px;
+    top: 0;
+    margin-top: 0;
+    }
+    .zephyr_uploaded_img {
+    float: left;
+    margin: 0 10px 10px 0;
+    position: relative;
+    transition: left 300ms ease;
+    -webkit-transition: left 300ms ease;
+    -moz-transition: left 300ms ease;
+    -ms-transition: left 300ms ease;
+    -o-transition: left 300ms ease;
+    }
+    .widget-inside .zephyr_uploaded_img {
+    width: 90px;
+    margin: 5px;
+    }
+    .widget-inside .zephyr_uploaded_img img {
+    max-width: 100%;
+    }
+    .zephyr_uploaded_img .media-modal-close {
+    top: 0;
+    right: 5px;
+    }
+    .dd-selected-text {
+    line-height: 32px !important;
+    }
+    .socials-list img, .socials-list span {
+    vertical-align: middle;
+    }
+    .socialrow {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    max-width: 600px;
+    }
+    .remove-social {
+    float: right;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 9px;
+    }
+    #postgal {
+    display: none;
+    }
+    .admin-color-fresh  #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-light #toplevel_page_zephyr-ads .wp-menu-image  {
+    background-image:  url('../img/adsicons/adicon.png') !important;
+    }
+	.admin-color-fresh  #toplevel_page_zephyr-ads:hover .wp-menu-image {
+	background-image:  url('../img/adsicons/adicon_blue.png') !important;
+	}
+    .admin-color-blue #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-coffee #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-ectoplasm  #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-midnight  #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-ocean  #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-sunrise  #toplevel_page_zephyr-ads .wp-menu-image, .admin-color-fresh  #toplevel_page_zephyr-ads.current .wp-menu-image {
+    background-image:  url('../img/adsicons/adiconwhite.png') !important;
+    }
+    #toplevel_page_zephyr-ads .wp-menu-image {
+    content: '';
+   	background-position: center center !important;
+   	background-repeat: no-repeat !important;
+    }
+     #adminmenu  #toplevel_page_zephyr-ads.menu-icon-generic div.wp-menu-image:before {
+    content: '';
+    }
+    #zephyr-page-layout input[type="radio"] {
+    margin-right: 0;
+    }
