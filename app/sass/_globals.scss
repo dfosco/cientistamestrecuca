@@ -15,10 +15,10 @@ body {
 	background: #F69669;
 	height: 90px;
 
-	& .wrapper {
+	.header-wrap {
 		@include outer-container;
 
-		& .main {
+		.header-main {
 
 		@include span-columns (10 of 12);
 		
