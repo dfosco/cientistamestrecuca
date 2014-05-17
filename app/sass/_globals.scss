@@ -1,13 +1,13 @@
 @import "_mixins.scss";
+@import "_typography.scss";
 @import "_variables.scss";
 
 /*Pesticide Layout Debug*/
-@include pesticide(true);
+@include pesticide(false);
 
 
 
 body {
-	font-family: "brandon-grotesque",sans-serif;
 	background-color: #FDF6EB;
 }
 
@@ -22,10 +22,13 @@ body {
 
 		@include span-columns (10 of 12);
 		
-		p, h1 {
+		h1 {
 			margin: 0px;
-	     	font-family: "museo-sans-rounded",sans-serif;
-			font-size: 40pt;
+			font-size: $title-font-size;
+	     	font-family: $title-font-family;
+	     	font-weight: $title-font-weight;
+			line-height: $title-line-height;
+			
 		}
 
 		}
