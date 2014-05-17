@@ -1,4 +1,4 @@
-// Generated on 2014-05-16 using generator-bourbon-neat 0.1.1
+// Generated on 2014-05-17 using generator-bourbon-neat 0.1.1
 'use strict';
 
 // # Globbing
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
                     middleware: function(connect) {
                         return [
                             connect.static('.tmp'),
-                            connect().use('/_bower_components', connect.static('./_bower_components')),
+                            connect().use('/bower_components', connect.static('./bower_components')),
                             connect.static(config.app)
                         ];
                     }
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
                         return [
                             connect.static('.tmp'),
                             connect.static('test'),
-                            connect().use('/_bower_components', connect.static('./_bower_components')),
+                            connect().use('/bower_components', connect.static('./bower_components')),
                             connect.static(config.app)
                         ];
                     }
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     base: '<%= config.dist %>',
-                    livereload: true
+                    livereload: false
                 }
             }
         },
@@ -152,8 +152,8 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 loadPath: [
-                    '_bower_components/bourbon/dist/',
-                    '_bower_components/neat/app/assets/stylesheets/'
+                    'bower_components/bourbon/dist/',
+                    'bower_components/neat/app/assets/stylesheets/'
                 ]
             },
             dist: {
@@ -335,7 +335,7 @@ module.exports = function (grunt) {
         // reference in your app
         modernizr: {
             dist: {
-                devFile: '_bower_components/modernizr/modernizr.js',
+                devFile: 'bower_components/modernizr/modernizr.js',
                 outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
                 files: {
                     src: [
