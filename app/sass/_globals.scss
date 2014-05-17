@@ -1,6 +1,11 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+/*Pesticide Layout Debug*/
+@include pesticide(true);
+
+
+
 body {
 	font-family: $helvetica;
 	background-color: #FDF6EB;
@@ -9,25 +14,25 @@ body {
 .header {
 	background: #F69669;
 	height: 90px;
-	
-	& .main {
 
+	& .wrapper {
 		@include outer-container;
 
-		& .content{
+		& .main {
 
-			@include span-columns (10 of 12);
-			p {
-				margin: 0px;
-		     	font-family: "museo-sans-rounded",sans-serif;
-				font-size: 40pt;
-			}
-
+		@include span-columns (10 of 12);
+		
+		p, h1 {
+			margin: 0px;
+	     	font-family: "museo-sans-rounded",sans-serif;
+			font-size: 40pt;
+		}
 
 		}
+		
 	}
-	
 }
+	
 
 .main {
 	
@@ -45,3 +50,4 @@ body {
 	}
 
 @include sticky-footer
+
