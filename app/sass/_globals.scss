@@ -3,15 +3,30 @@
 
 body {
 	font-family: $helvetica;
-	background-color: #f0f0f0;
+	background-color: #FDF6EB;
 }
 
 .header {
 	background: #F69669;
+	height: 90px;
 	
-	p {
-		margin: 0px;
+	& .main {
+
+		@include outer-container;
+
+		& .content{
+
+			@include span-columns (10 of 12);
+			p {
+				margin: 0px;
+		     	font-family: "museo-sans-rounded",sans-serif;
+				font-size: 40pt;
+			}
+
+
+		}
 	}
+	
 }
 
 .main {
@@ -20,7 +35,7 @@ body {
 	
 		.content {
 			@include span-columns(8 of 12);
-			background: #FFF;
+			
 		}
 
 		.sidebar {
@@ -28,10 +43,5 @@ body {
 			background: #FFB383
 		}
 	}
-
-
-.footer {
-	background: #5E626B;
-}
 
 @include sticky-footer
