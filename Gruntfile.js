@@ -104,7 +104,7 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     base: '<%= config.dist %>',
-                    livereload: false
+                    livereload: true
                 }
             }
         },
