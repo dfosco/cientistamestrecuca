@@ -1,56 +1,84 @@
+/*Imports*/
 @import "_mixins.scss";
-@import "_typography.scss";
 @import "_variables.scss";
+@import "_pesticide-mixin.scss";
 
 /*Pesticide Layout Debug*/
 @include pesticide(false);
 
+/*------------------------------*/
 
+/*Global Typography*/
 
 body {
-	background-color: #FDF6EB;
+	color: $base-color;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+
+	background-color: $light-pallette-a;
 }
 
+h1, h2, h3, h4 {
+	color: $heading-color;
+	font-family: $heading-font-family;
+	font-weight: $heading-font-weight;
+	line-height: $heading-line-height;
+}
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+h3 { font-size: 180%; }
+h4 { font-size: 150%; }
+
+h1, h2 { line-height: 1.1; }
+h3, h4 { line-height: 1.3; }
+
+/*Interface Typography*/
+/*
+.interface {
+
+}
+*/
+
+/*Main Sections*/
+
 .header {
-	background: #F69669;
+	background: $light-pallette-d;
 	height: 90px;
 
 	.header-wrap {
 		@include outer-container;
 
 		.header-main {
-
-		@include span-columns (10 of 12);
-		
-		h1 {
-			margin: 0px;
-			font-size: $title-font-size;
-	     	font-family: $title-font-family;
-	     	font-weight: $title-font-weight;
-			line-height: $title-line-height;
+			@include span-columns (10 of 12);
 			
-		}
-
-		}
-		
+			h1 {
+				margin-bottom: 0px;
+				font-size: $title-font-size;
+		     	font-family: $title-font-family;
+		     	font-weight: $title-font-weight;
+				line-height: $title-line-height;
+				color: $title-color;
+			}
+		}		
 	}
 }
 	
-
 .main {
-	
 	@include outer-container; 
 	
 		.content {
 			@include span-columns(8 of 12);
-			
 		}
 
 		.sidebar {
 			@include span-columns(4 of 12);
-			background: #FFB383
+			background: $light-pallette-c;
 		}
 	}
-
+	
 @include sticky-footer
 
+/*Main Sections*/

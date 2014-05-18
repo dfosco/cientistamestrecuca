@@ -1,0 +1,45 @@
+/*Color Variables*/
+
+$dark-pallette: #503B52;
+$dark-pallette-soft: lighten($dark-pallette, 15%);
+$dark-pallette-softer: lighten($dark-pallette, 30%);
+
+$light-pallette-a: #FDF6EB;
+$light-pallette-b: #FFE2BA;
+$light-pallette-c: #FFB383;
+$light-pallette-d: #F69669;
+$light-pallette-e: #FD7343;
+
+$grey-pallette-a: #4A4A4A;
+$grey-pallette-b: #5E626B;
+
+/*Typography Variables*/
+
+$title-font-size: 40px;
+$title-font-family: "museo-sans-rounded",sans-serif;
+$title-font-weight: 800;
+$title-line-height: 55px;
+
+$heading-font-size: 40px;
+$heading-font-family: "proxima-nova-soft",sans-serif;
+$heading-font-weight: 700;
+$heading-line-height: 55px;
+
+$base-font-size: 16px;
+$base-font-family: "proxima-nova-soft",sans-serif;
+$base-font-weight: 400;
+$base-line-height: 25px;
+
+/*Typography Color Variables*/
+	
+$title-color: $dark-pallette;
+$heading-color: $dark-pallette-soft;
+$base-color: $grey-pallette-a;
+
+$base-link-color: $light-pallette-e;
+$hover-link-color: $light-pallette-c;
+$disabled-link-color: lighten($base-color, 60%);
+
+$heading-link-color: $dark-pallette-soft;
+$heading-hover-link-color: $dark-pallette-softer;
+$heading-disabled-link-color: lighten($base-color, 60%);
