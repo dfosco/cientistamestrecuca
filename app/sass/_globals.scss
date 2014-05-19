@@ -41,17 +41,39 @@ h4 {
 		@include outer-container;
 
 		.header-main {
-			@include span-columns (10 of 12);
-			
+			@include span-columns (8 of 12);
+	
 			h1 {
-				margin-bottom: 0px;
-				font-size: $title-font-size;
-		     	font-family: $title-font-family;
-		     	font-weight: $title-font-weight;
-				line-height: $title-line-height;
-				color: $title-color;
+				@include title(250%, 1, 800);
 			}
-		}		
+		}
+	}
+}
+
+.menu {
+	margin-top: 0px;		
+	height: 60px;
+	background: $light-pallette-b;
+
+	.menu-wrap {
+		@include outer-container;
+
+		.menu-main {
+			@include span-columns (8 of 12);
+			
+			ul { 
+				list-style-type: none;
+				padding-left: 10px;
+			
+				li { 				
+					@include interface-big;
+					@include heading-link;
+					color: $heading-color;
+					display: inline;  
+					margin-right: 20px;
+				}
+			}
+		}
 	}
 }
 	
@@ -67,7 +89,5 @@ h4 {
 			background: $light-pallette-c;
 		}
 	}
-	
-@include sticky-footer
 
-/*Main Sections*/
+@include sticky-footer(60px);
