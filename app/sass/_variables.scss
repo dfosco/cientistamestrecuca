@@ -12,11 +12,13 @@ $light-pallette-c: #FFB383;
 $light-pallette-d: #F69669;
 $light-pallette-e: #FD7343;
 
+$grey-pallette-0: #D8D8D8;
 $grey-pallette-a: #4A4A4A;
 $grey-pallette-b: #5E626B;
+$grey-pallette-c: #2A2B2E;
 
 /*Typography - Size*/
-/*These are just default values, stated for modularity. Main usage with base()/heading()/title() mixins*/
+/* These are just default values, stated for modularity. Main usage with base(), heading() and huge() mixins */
 
 $base-font-size: 18px !default;
 $base-font-family: "proxima-nova-soft",sans-serif;
