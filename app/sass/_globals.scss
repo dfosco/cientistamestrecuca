@@ -16,7 +16,7 @@ body {
 
 
 h1 { 
-	@include heading(250%, 1.3, 700)
+	@include heading(250%, 1.3, 700);
 }
 
 h2 { 
@@ -90,25 +90,80 @@ header {
 	
 		article {
 			@include span-columns(8 of 12);
+			@include media($mobile) {
+			@include span-columns(12 of 12);
+			}
 			section {
-				
-				&.styleguide {
-					background-color: $grey-pallette-0;
-					padding: 1em;
-					
-					h1,h2,h3,h4 {
-						&.styleguide {
-							@include heading(120%, 1.5, 600);
-							color: darken(grey, 30%);
-						}
+
+				&.styleguide-type {
+					@include styleguide-tile;
+				}
+
+				&.styleguide-color {
+					@include outer-container;
+					@include styleguide-tile;
+					@include color-pallete-tile;
+
+
+				//*------------------------------------*//
+					//These should be substituted for a Sass Map **SOON**
+				//*------------------------------------*//
+
+					div.grey-pallette-0 {
+						background-color: $grey-pallette-0;
+						border: 2px solid $grey-pallette-c;
 					}
 
-					@include margin(2em null 2em null);
-					@include border-top-radius(5px);
-					@include border-bottom-radius(5px);
-				}
-			}
+					div.grey-pallette-a {
+						background-color: $grey-pallette-a;
+						color: $grey-pallette-0;
+					}
 
+					div.grey-pallette-b {
+						background-color: $grey-pallette-b;
+						color: $grey-pallette-0;
+					}
+
+					div.grey-pallette-c {
+						background-color: $grey-pallette-c;
+						color: $grey-pallette-0;
+					}
+
+					div.light-pallette-a {
+						background-color: $light-pallette-a
+					}
+
+					div.light-pallette-b {
+						background-color: $light-pallette-b
+					}
+
+					div.light-pallette-c {
+						background-color: $light-pallette-c
+					}
+
+					div.light-pallette-d {
+						background-color: $light-pallette-d
+					}
+
+					div.light-pallette-e {
+						background-color: $light-pallette-e
+					}
+
+					div.dark-pallette-a {
+						background-color: $dark-pallette-a
+					}
+
+					div.dark-pallette-b {
+						background-color: $dark-pallette-b;
+						color: $grey-pallette-0;
+					}
+
+					div.dark-pallette-c {
+						background-color: $dark-pallette-c;
+						color: $grey-pallette-0;
+					}
+				}	
+			}
 		}
 
 		aside.sidebar {

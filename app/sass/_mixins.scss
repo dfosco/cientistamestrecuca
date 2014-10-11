@@ -77,8 +77,9 @@
 	}
 }
 
+
 /*----------------------------*/
-/*Others*/
+/*Components*/
 /*----------------------------*/
 
 @mixin sticky-footer($footer-height) {
@@ -112,3 +113,52 @@
 	  @include footer-text;
 	}
 }
+
+@mixin styleguide-tile {
+	
+	@include margin(2em null 2em null);				
+	background-color: $grey-pallette-0;
+	display: block;
+	padding: 1em;				
+	@include border-top-radius(5px);
+	@include border-bottom-radius(5px);
+
+	@include media($mobile) {
+		@include margin(2em 0.5em 2em 0.5em);	
+	}
+	
+	h4.styleguide {
+		@include heading(150%, 1.5, 600);
+		color: darken(grey, 30%);
+	}
+}
+
+@mixin color-pallete-tile {
+
+	div {
+		@include span-columns(2 of 8);
+		@include margin(2em 6px 0.1em 6px);	
+		
+		@include border-top-radius(5px);
+		@include border-bottom-radius(5px);
+		width: 10em;   
+		height: 5em;
+		
+		@include media($mobile) {
+		width: 8em;
+		};
+		
+		//Pallette-text;
+		text-align: center;
+		padding-top: 1.5em;
+
+	}
+
+
+}
+
+
+
+
+
+
