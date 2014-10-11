@@ -25,15 +25,18 @@ h2 {
 
 h3 { 
 	@include heading(180%, 1.1, 600);
-		&.styleguide {
-			@include heading(180%, -0.3, 600);
-			color: darken(grey, 30%);
-
-		}
 }
 
 h4 { 
 	@include heading(150%, 1.1, 600)
+}
+
+.interface {
+	@include interface
+}
+
+.interface-big {
+	@include interface-big
 }
 
 /*Main Sections*/
@@ -93,8 +96,14 @@ header {
 					background-color: $grey-pallette-0;
 					padding: 1em;
 					
+					h1,h2,h3,h4 {
+						&.styleguide {
+							@include heading(120%, 1.5, 600);
+							color: darken(grey, 30%);
+						}
+					}
+
 					@include margin(2em null 2em null);
-					
 					@include border-top-radius(5px);
 					@include border-bottom-radius(5px);
 				}
