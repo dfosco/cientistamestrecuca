@@ -24,7 +24,12 @@ h2 {
 }
 
 h3 { 
-	@include heading(180%, 1.1, 600)
+	@include heading(180%, 1.1, 600);
+		&.styleguide {
+			@include heading(180%, -0.3, 600);
+			color: darken(grey, 30%);
+
+		}
 }
 
 h4 { 
@@ -33,7 +38,7 @@ h4 {
 
 /*Main Sections*/
 
-.header {
+header {
 	background: $light-pallette-d;
 	height: 90px;
 
@@ -80,11 +85,24 @@ h4 {
 .main {
 	@include outer-container; 
 	
-		.content {
+		article {
 			@include span-columns(8 of 12);
+			section {
+				
+				&.styleguide {
+					background-color: $grey-pallette-0;
+					padding: 1em;
+					
+					@include margin(2em null 2em null);
+					
+					@include border-top-radius(5px);
+					@include border-bottom-radius(5px);
+				}
+			}
+
 		}
 
-		.sidebar {
+		aside.sidebar {
 			@include span-columns(4 of 12);
 			background: $light-pallette-c;
 		}
