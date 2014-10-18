@@ -92,15 +92,48 @@ header {
 .main {
 	@include outer-container; 
 	
-		article {
+		article.featured-post {
 			@include span-columns(8 of 12);
 			
 			@include media($mobile) {
 				@include span-columns(12 of 12);
 			}
-
-			section.metabar { 
 			
+			section.featured-post-image {
+				img {
+					@include fill-parent;
+				}
+			}
+			
+			section.titlebar {
+				.category-author {
+					@include span-columns(2 of 8); 
+					
+					.category {
+						background: $grey-pallette-c;
+						color: $light-pallette-a;
+						@include span-columns(2 of 2);
+					}
+
+					.author {
+						background: $grey-pallette-a;
+						color: $light-pallette-a;
+						@include span-columns(2 of 2);
+					}
+				
+					h1 {
+						@include span-columns(6 of 8);
+					}
+				}
+			
+			section.metabar {
+				
+				}
+				.sharebar {
+					background: $light-pallette-d;
+					@include span-columns(6 of 8);
+					@include margin(null null 2em null);
+				}
 			}
 
 			@include styleguide-section;
@@ -108,13 +141,13 @@ header {
 		
 		aside {
 			@include span-columns(4 of 12);
-			background-color: $light-pallette-c;
 			@include interface;
+			background-color: $light-pallette-c;
 
 			height: 400px;
 			margin-bottom: 500px;
 		}
-
 	}
 
 @include sticky-footer(60px);
+
