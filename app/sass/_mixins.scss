@@ -227,7 +227,26 @@
 
 }
 
+//*------------------------------------*//
+//General Layout Adjustments
+//*------------------------------------*//
 
+@mixin same-height {
+	padding-bottom: 100%;
+	margin-bottom: -100%;
+}
 
+@mixin border-radius($border-rad) {
+	@include border-top-radius($border-rad);
+	@include border-bottom-radius($border-rad);
+	@include border-left-radius($border-rad);
+	@include border-right-radius($border-rad);
+}
 
+@mixin border-radius-dif($top, $right, $bottom, $left) {
+	@include border-top-radius($top);
+	@include border-bottom-radius($right);
+	@include border-left-radius($bottom);
+	@include border-right-radius($left);
+}
 
