@@ -90,9 +90,10 @@ header {
 }
 	
 .main {
-	@include outer-container; 
+	@include outer-container;
+	margin-top: 1em;
 	
-		article.featured-post {
+		article {
 			@include span-columns(8 of 12);
 			
 			@include media($mobile) {
@@ -102,13 +103,22 @@ header {
 			section.featured-post-image {
 				img {
 					@include fill-parent;
+					@include border-radius(8px);
 				}
 			}
 			
 			section.titlebar {
+				.title {
+					@include span-columns(7 of 8);
+
+					h1 {
+						@include margin(0 null null null);
+					}
+				}
+
 				.category-author {
-					@include span-columns(2 of 8); 
-					
+					@include span-columns(1 of 8); 
+
 					.category {
 						background: $grey-pallette-c;
 						color: $light-pallette-a;
@@ -119,12 +129,8 @@ header {
 						background: $grey-pallette-a;
 						color: $light-pallette-a;
 						@include span-columns(2 of 2);
-					}
-				
-					h1 {
-						@include span-columns(6 of 8);
-					}
 				}
+			}
 			
 			section.metabar {
 				
