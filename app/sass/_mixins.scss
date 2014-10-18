@@ -94,7 +94,7 @@
 
 	.wrapper {
 	  min-height: 100%;
-	  /* equal to footer height */
+	  /* Push, equal to footer height */
 		margin-bottom: -#{$footer-height}; 
 	}
 
@@ -103,7 +103,7 @@
 	  display: block;
 	}
 
-	.sticky-footer, .wrapper:after {
+	.sticky-footer, {
 	  /* .push must be the same height as footer */
 		height: $footer-height; 
 	}
