@@ -53,11 +53,11 @@
 /*----------------------------*/
 
 @mixin interface {
-	@include base("", "", 600)
+	@include base("", "", 400)
 }
 
 @mixin interface-big {
-	@include base(112%, "", 600)
+	@include base(125%, "", 600)
 }
 
 @mixin em-margin($margin-top, $margin-bottom) {
@@ -151,12 +151,81 @@
 		//Pallette-text;
 		text-align: center;
 		padding-top: 1.5em;
-
 	}
-
-
 }
 
+@mixin styleguide-section {
+
+			section.styleguide-type {
+					@include styleguide-tile;
+				}
+
+
+			section.styleguide-color {
+								@include outer-container;
+								@include styleguide-tile;
+								@include color-pallete-tile;
+
+								.grey-pallette-0 {
+									background-color: $grey-pallette-0;
+									border: 2px solid $grey-pallette-c;
+								}
+
+								.grey-pallette-a {
+									background-color: $grey-pallette-a;
+									color: $grey-pallette-0;
+								}
+
+								.grey-pallette-b {
+									background-color: $grey-pallette-b;
+									color: $grey-pallette-0;
+								}
+
+								.grey-pallette-c {
+									background-color: $grey-pallette-c;
+									color: $grey-pallette-0;
+								}
+
+								.light-pallette-a {
+									background-color: $light-pallette-a
+								}
+
+								.light-pallette-b {
+									background-color: $light-pallette-b
+								}
+
+								.light-pallette-c {
+									background-color: $light-pallette-c
+								}
+
+								.light-pallette-d {
+									background-color: $light-pallette-d
+								}
+
+								.light-pallette-e {
+									background-color: $light-pallette-e
+								}
+
+								.dark-pallette-a {
+									background-color: $dark-pallette-a
+								}
+
+								.dark-pallette-b {
+									background-color: $dark-pallette-b;
+									color: $grey-pallette-0;
+								}
+
+								.dark-pallette-c {
+									background-color: $dark-pallette-c;
+									color: $grey-pallette-0;
+								}
+
+								//*------------------------------------*//
+								//These should be substituted for a Sass Map **SOON**
+								//*------------------------------------*//
+							}
+
+}
 
 
 
