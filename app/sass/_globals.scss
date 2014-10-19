@@ -88,72 +88,91 @@ header {
 		}
 	}
 }
-	
+
 .main {
 	@include outer-container;
 	margin-top: 1em;
 	
-		article {
-			@include span-columns(8 of 12);
-			
-			@include media($mobile) {
-				@include span-columns(12 of 12);
-			}
-			
-			section.featured-post-image {
-				img {
-					@include fill-parent;
-					@include border-radius(8px);
-				}
-			}
-			
-			section.titlebar {
-				.title {
-					@include span-columns(7 of 8);
+}
 
-					h1 {
-						@include margin(0 null null null);
-					}
-				}
-
-				.category-author {
-					@include span-columns(1 of 8); 
-
-					.category {
-						background: $grey-pallette-c;
-						color: $light-pallette-a;
-						@include span-columns(2 of 2);
-					}
-
-					.author {
-						background: $grey-pallette-a;
-						color: $light-pallette-a;
-						@include span-columns(2 of 2);
-				}
-			}
-			
-			section.metabar {
-				
-				}
-				.sharebar {
-					background: $light-pallette-d;
-					@include span-columns(6 of 8);
-					@include margin(null null 2em null);
-				}
-			}
-
-			@include styleguide-section;
-		}
-		
-		aside {
-			@include span-columns(4 of 12);
-			@include interface;
-			background-color: $light-pallette-c;
-
-			height: 400px;
-			margin-bottom: 500px;
+.content {
+	@include span-columns(8 of 12);
+	
+	@include media($mobile) {
+		@include span-columns(12 of 12);
+	}
+}
+article {
+	
+	section.featured-post-image {
+		img {
+			@include fill-parent;
+			@include border-radius(8px);
 		}
 	}
+	
+	section.titlebar {
+		.title {
+			@include span-columns(7 of 8);
+
+			h1 {
+				@include margin(0 null null null);
+			}
+		}
+
+		.category-author {
+			@include span-columns(1 of 8); 
+
+			.category {
+				background: $grey-pallette-c;
+				color: $light-pallette-a;
+			}
+
+			.author {
+				background: $grey-pallette-a;
+				color: $light-pallette-a;
+			}
+		}
+	}
+	
+	section.metabar {
+
+		.date {
+			background: $light-pallette-d;
+			@include span-columns(1 of 8);
+		}
+
+		.tagbar {
+			background: $light-pallette-d;
+			@include span-columns(7 of 8);
+			//@include margin(null null 2em null);
+		}
+	}
+
+	section.post-excerpt {
+		@include outer-container;
+		//Why is this happening?? Why do I need 13em margin for it to work?
+		@include margin(13.5em null null null);
+
+		button {
+		@include margin(1em null null null);
+		}
+
+
+	}
+	
+
+	@include styleguide-section;
+}
+
+aside {
+	@include span-columns(4 of 12);
+	@include interface;
+	background-color: $light-pallette-c;
+
+	height: 400px;
+	margin-bottom: 500px;
+}
 
 @include sticky-footer(60px);
 
