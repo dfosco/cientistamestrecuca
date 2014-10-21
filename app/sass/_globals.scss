@@ -97,6 +97,7 @@ header {
 
 .content {
 	@include span-columns(8 of 12);
+	@include styleguide-section;
 	
 	@include media($mobile) {
 		@include span-columns(12 of 12);
@@ -104,6 +105,8 @@ header {
 }
 article {
 	
+	
+
 	section.featured-post-image {
 		img {
 			@include fill-parent;
@@ -161,8 +164,6 @@ article {
 
 	}
 	
-
-	@include styleguide-section;
 }
 
 aside {

@@ -116,12 +116,12 @@
 
 @mixin styleguide-tile {
 	
-	@include margin(2em null 2em null);				
 	background-color: $grey-pallette-0;
 	display: block;
 	padding: 1em;				
 	@include border-top-radius(5px);
 	@include border-bottom-radius(5px);
+	@include margin(null null 2em null);			
 
 	@include media($mobile) {
 		@include margin(2em 0.5em 2em 0.5em);	
@@ -163,8 +163,8 @@
 
 			section.styleguide-color {
 								@include outer-container;
-								@include styleguide-tile;
 								@include color-pallete-tile;
+								@include styleguide-tile;	
 
 								.grey-pallette-0 {
 									background-color: $grey-pallette-0;
