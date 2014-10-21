@@ -47,7 +47,7 @@ h4 {
 
 header {
 	background: $light-pallette-d;
-	height: 90px;
+	height: 120px;
 
 	.header-wrap {
 		@include outer-container-margin;
@@ -57,6 +57,12 @@ header {
 	
 			h1 {
 				@include title(250%, 1, 800);
+			}
+
+			img {
+				display: inline;
+				height: 1.5em;
+				margin-left: 0.2em;
 			}
 		}
 	}
@@ -103,6 +109,8 @@ header {
 	}
 }
 article.featured-post {
+	
+	@include margin(null null 1em null);
 
 	section.featured-post-image {
 		img {
@@ -116,7 +124,7 @@ article.featured-post {
 			@include span-columns(7 of 8);
 
 			h1 {
-				@include margin(0 null null null);
+				@include margin(0 null 15px null);
 			}
 		}
 
@@ -124,38 +132,81 @@ article.featured-post {
 			@include span-columns(1 of 8); 
 
 			.category {
-				background: $grey-pallette-c;
-				color: $light-pallette-a;
+				@include hover-bump;
+				img {
+					@include fill-parent;
+				}
 			}
 
 			.author {
-				background: $grey-pallette-a;
-				color: $light-pallette-a;
+				img {
+					@include fill-parent;
+					@include border-radius(50%);
+					border: 4px solid $dark-pallette-b;
+					position: relative;
+					top: -1.5em;
+				}
+
+				img:hover {
+					border: 4px solid $dark-pallette-a;
+					@include hover-bump;
+				}
 			}
 		}
 	}
 	
 	section.metabar {
 
-		.date {
-			background: $light-pallette-d;
+		span.date {
 			@include span-columns(1 of 8);
+			@include interface-big;
+			text-align: center;
+		}
+			
+		span.tag {
+			margin-right: 1.5em;
+			background: $light-pallette-b;
+			@include border-radius(5px);
+			padding: 4px 6px 4px 6px;
 		}
 
-		.tagbar {
-			background: $light-pallette-d;
-			@include span-columns(7 of 8);
-			//@include margin(null null 2em null);
+		span.tag:hover {
+			background: $light-pallette-c;
+			color: $light-pallette-b;
+
+			a:hover {
+				color: $light-pallette-b;
+			}	
 		}
+		
 	}
+
 
 	section.post-excerpt {
 		@include outer-container;
 		//Why is this happening?? Why do I need 13em margin for it to work?
-		@include margin(13.5em null null null);
+		@include margin(1em null null null);
 
 		button {
-		@include margin(1em null null null);
+			@include margin(1em null null null);
+			@include border-radius (5px);
+			background: $light-pallette-b;
+			border: none;
+			
+			a {
+				&::after {
+				content: " -->"
+				}
+			}
+		}
+
+		button:hover {
+			background: $light-pallette-c;
+			color: $light-pallette-b;
+
+			a:hover {
+				color: $light-pallette-b;
+			}	
 		}
 
 

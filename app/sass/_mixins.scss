@@ -57,7 +57,7 @@
 }
 
 @mixin interface-big {
-	@include base(125%, "", 600)
+	@include base(130%, "", 600)
 }
 
 @mixin em-margin($margin-top, $margin-bottom) {
@@ -76,7 +76,6 @@
 		margin-left: 20px;
 	}
 }
-
 
 /*----------------------------*/
 /*Components*/
@@ -262,4 +261,12 @@
                    }
               }
          }
+}
+
+@mixin hover-bump {
+	&:hover {
+		width: 105%;
+		height: 105%;
+		right: 3.5%;
+	}
 }
