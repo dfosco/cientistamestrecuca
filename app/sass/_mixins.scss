@@ -250,3 +250,16 @@
 	@include border-right-radius($left);
 }
 
+@mixin outer-container-margin {
+    @include outer-container;
+     max-width: $max-width;
+         padding: 0 flex-gutter($grid-columns) / 2;
+         @include box-sizing(content-box);
+         @each $breakpoint in $visual-grid-breakpoints {
+             @if $breakpoint != nil {
+                  @include media($breakpoint) {
+                    padding: 0 flex-gutter($grid-columns);
+                   }
+              }
+         }
+}

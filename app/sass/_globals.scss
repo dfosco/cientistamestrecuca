@@ -50,7 +50,7 @@ header {
 	height: 90px;
 
 	.header-wrap {
-		@include outer-container;
+		@include outer-container-margin;
 
 		.header-main {
 			@include span-columns (8 of 12);
@@ -68,7 +68,7 @@ header {
 	background: $light-pallette-b;
 
 	.menu-wrap {
-		@include outer-container;
+		@include outer-container-margin;
 
 		.menu-main {
 			@include span-columns (8 of 12);
@@ -90,22 +90,19 @@ header {
 }
 
 .main {
-	@include outer-container;
 	margin-top: 1em;
-	
+	@include outer-container-margin;	
 }
 
 .content {
 	@include span-columns(8 of 12);
 	@include styleguide-section;
-	
+
 	@include media($mobile) {
 		@include span-columns(12 of 12);
 	}
 }
-article {
-	
-	
+article.featured-post {
 
 	section.featured-post-image {
 		img {
