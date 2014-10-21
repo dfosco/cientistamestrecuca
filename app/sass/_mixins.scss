@@ -2,7 +2,7 @@
 @import "_variables.scss";
 
 /*----------------------------*/
-/*Main Typography*/
+/*Basic Typography*/
 /*----------------------------*/
 
 @mixin base-link {
@@ -132,27 +132,6 @@
 	}
 }
 
-@mixin color-pallete-tile {
-
-	div {
-		@include span-columns(2 of 8);
-		@include margin(2em 6px 0.1em 6px);	
-		
-		@include border-top-radius(5px);
-		@include border-bottom-radius(5px);
-		width: 10em;   
-		height: 5em;
-		
-		@include media($mobile) {
-		width: 8em;
-		};
-		
-		//Pallette-text;
-		text-align: center;
-		padding-top: 1.5em;
-	}
-}
-
 @mixin styleguide-section {
 
 			section.styleguide-type {
@@ -223,7 +202,27 @@
 								//These should be substituted for a Sass Map **SOON**
 								//*------------------------------------*//
 							}
+}
 
+@mixin color-pallete-tile {
+
+	div {
+		@include span-columns(2 of 8);
+		@include margin(2em 6px 0.1em 6px);	
+		
+		@include border-top-radius(5px);
+		@include border-bottom-radius(5px);
+		width: 10em;   
+		height: 5em;
+		
+		@include media($mobile) {
+		width: 8em;
+		};
+		
+		//Pallette-text;
+		text-align: center;
+		padding-top: 1.5em;
+	}
 }
 
 //*------------------------------------*//
@@ -263,10 +262,25 @@
          }
 }
 
-@mixin hover-bump {
+/*@mixin hover-bump {
 	&:hover {
 		width: 105%;
 		height: 105%;
-		right: 3.5%;
+		//right: 3.5%;
+	}
+}*/
+
+@mixin badge-size($badge-size-width) {
+	width: $badge-size-width;
+	//height: $badge-size-height;
+	
+	@include media(tablet) {
+		width: $badge-size-width*1.8;
+		//height: $badge-size-height*1,4;
+	}
+
+	@include media(mobile) {
+		width: $badge-size-width*2;
+		//height: $badge-size-height*1,6;
 	}
 }

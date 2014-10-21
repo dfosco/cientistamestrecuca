@@ -4,8 +4,9 @@
 /*Media Queries*/
 /*----------------------------*/
 
+$tiny-mobile: new-breakpoint(max-width 500px 4);
 $mobile: new-breakpoint(max-width 768px 4);
-$tablet: new-breakpoint(min-width 769px max-width 991px 5);
+$tablet: new-breakpoint(min-width 769px max-width 991px 16);
 //$desktop: new-breakpoint(min-width 992px 6);
 
 /*----------------------------*/
