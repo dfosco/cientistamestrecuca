@@ -93,28 +93,30 @@ header {
 	margin-top: 0px;		
 	height: 60px;
 	background: $light-pallette-b;
+}
 
-	.menu-wrap {
-		@include outer-container-margin;
+.menu-wrap {
+	@include outer-container-margin;
+}
 
-		.menu-main {
-			@include span-columns (8 of 12);
-			
-			ul { 
-				list-style-type: none;
-				padding-left: 10px;
-			
-				li { 				
-					@include interface-big;
-					@include heading-link;
-					color: $heading-color;
-					display: inline;  
-					margin-right: 20px;
-				}
-			}
+.menu-main {
+	@include span-columns (8 of 12);
+	
+	ul { 
+		list-style-type: none;
+		padding-left: 10px;
+	
+		li { 				
+			@include interface-big;
+			@include heading-link;
+			color: $heading-color;
+			display: inline;  
+			margin-right: 20px;
 		}
 	}
 }
+	
+
 
 .main {
 	margin-top: 1em;
@@ -135,7 +137,7 @@ header {
 	}
 }
 
-aside {
+aside.sidebar {
 	@include span-columns(4 of 12);
 	
 	@include media($tablet) {
@@ -146,11 +148,24 @@ aside {
 		@include span-columns(4 of 4);
 	};
 
-	@include interface;
-	background-color: $light-pallette-c;
+	@include border-radius(8px);
 
-	height: 400px;
+	background-color: $light-pallette-c;
+	height: 100%;
 	margin-bottom: 500px;
+	padding: 15px;
 }
+
+.sidebar--title {
+	//@include interface-big;
+	text-align: center;
+}
+
+.sidebar--img {
+	@include fill-parent;
+	margin-top: 10px;
+}
+
+.sidebar--paragraph { }
 
 @include sticky-footer(60px);
