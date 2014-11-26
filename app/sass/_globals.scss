@@ -147,25 +147,26 @@ aside.sidebar {
 	@include media($mobile) {
 		@include span-columns(4 of 4);
 	};
+}
 
+.about {
 	@include border-radius(8px);
-
 	background-color: $light-pallette-c;
 	height: 100%;
 	margin-bottom: 500px;
 	padding: 15px;
 }
 
-.sidebar--title {
+.about--title {
 	//@include interface-big;
 	text-align: center;
 }
 
-.sidebar--img {
+.about--img {
 	@include fill-parent;
 	margin-top: 10px;
 }
 
-.sidebar--paragraph { }
+.about--paragraph { }
 
 @include sticky-footer(60px);
