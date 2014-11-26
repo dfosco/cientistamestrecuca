@@ -137,6 +137,10 @@ header {
 	}
 }
 
+/*------------------------------*/
+/*Sidebar Layout*/
+/*------------------------------*/
+
 aside.sidebar {
 	@include span-columns(4 of 12);
 	
@@ -153,7 +157,7 @@ aside.sidebar {
 	@include border-radius(8px);
 	background-color: $light-pallette-c;
 	height: 100%;
-	margin-bottom: 500px;
+	margin-bottom: 1em;
 	padding: 15px;
 }
 
@@ -168,5 +172,9 @@ aside.sidebar {
 }
 
 .about--paragraph { }
+
+/*------------------------------*/
+/*Footer Layout*/
+/*------------------------------*/
 
 @include sticky-footer(60px);
