@@ -171,7 +171,26 @@ aside.sidebar {
 	margin-top: 10px;
 }
 
-.about--paragraph { }
+.about--paragraph { };
+
+.share-button {
+	width: 100%;
+	border: none;
+	padding: 10px;
+	color: $light-pallette-a;
+	@include border-radius(5px);
+}
+
+.share-button--facebook {
+	background: #306199;
+	color: $light-pallette-a;
+
+	&:hover, &:active {
+		background: #244872;
+		color: $light-pallette-a;
+	}
+}
+
 
 /*------------------------------*/
 /*Footer Layout*/
