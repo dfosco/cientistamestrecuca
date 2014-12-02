@@ -1,0 +1,34 @@
+/*
+
+Style sheet for tafars
+
+*/
+
+//Load the site variables
+@import 'variables';
+
+
+//load anything that is used to create other elements
+@import 'constructors/generic-placeholder';//see notes in file
+@import 'constructors/functions';
+@import 'constructors/clearfix';//see notes in file
+
+//Core styles
+@import 'core/reset'; //normalize is also available
+
+//Bourbon and Friends
+@import 'components/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import 'components/neat/app/assets/stylesheets/_neat.scss';
+@import 'components/bitters/app/assets/stylesheets/_bitters.scss';
+@import 'components/reffils/app/assets/stylesheets/_reffils.scss';
+
+
+//Modules for thing s like nav, content
+//@import 'modules/module-name';
+
+//Default Wordpress classes for your enjoyment/ hacking!
+@import 'modules/wp-core';
+
+
+//Print styles & misc.
+@import 'modules/print';
