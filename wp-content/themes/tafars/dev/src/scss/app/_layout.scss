@@ -6,26 +6,26 @@
 /*Global Layout*/
 /*------------------------------*/
 
-header {
+header.header {
 	background: $light-pallette-d;
 	height: 120px;
+}
 
-	.header-wrap {
-		@include outer-container-margin;
+.header--wrap {
+	@include outer-container-margin;
+}
 
-		.header-main {
-			@include span-columns (12 of 12);
+.header--main {
+	@include span-columns (12 of 12);
 
-			h1 {
-				@include title(250%, 1, 800);
-			};
+	h1 {
+		@include title(250%, 1, 800);
+	};
 
-			img {
-				display: inline;
-				height: 1.5em;
-				margin-left: 0.2em;
-			}
-		}
+	img {
+		display: inline;
+		height: 1.5em;
+		margin-left: 0.2em;
 	}
 }
 
