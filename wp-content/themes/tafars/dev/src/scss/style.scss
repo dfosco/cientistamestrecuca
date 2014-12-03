@@ -4,11 +4,11 @@ Style sheet for tafars
 
 */
 
-//The Basics
+//Boilerplate
 @import "../../bower_components/bourbon/dist/_bourbon.scss";
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 @import "base/base";
 
 //App
-@import "core/_layout.scss";
-@import "core/_type.scss";
+@import "app/_layout.scss";
+@import "app/_type.scss";
