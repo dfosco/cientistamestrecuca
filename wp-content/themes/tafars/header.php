@@ -117,6 +117,9 @@
 
 	<?php wp_head(); ?>
 
+	<script src="//use.typekit.net/ike0qyg.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
 </head>
 
 <body <?php body_class(); ?>>
