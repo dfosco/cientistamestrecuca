@@ -1,0 +1,11 @@
+{
+  "name": "tafars",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
+  "resolutions": {
+    "jquery": "~2.1.1"
+  }
+}
