@@ -1,0 +1,73 @@
+/*Variables*/
+
+/*----------------------------*/
+/*Media Queries*/
+/*----------------------------*/
+
+$tiny-mobile: new-breakpoint(max-width 500px 4);
+$mobile: new-breakpoint(max-width 768px 4);
+$tablet: new-breakpoint(min-width 769px max-width 991px 16);
+//$desktop: new-breakpoint(min-width 992px 6);
+
+/*----------------------------*/
+/*Color Pallettes*/
+/*----------------------------*/
+
+$dark-pallette-c: #503B52;
+$dark-pallette-b: lighten($dark-pallette-c, 15%);
+$dark-pallette-a: lighten($dark-pallette-c, 30%);
+
+$light-pallette-a: #FDF6EB;
+$light-pallette-b: #FFE2BA;
+$light-pallette-c: #FFB383;
+$light-pallette-d: #F69669;
+$light-pallette-e: #FD7343;
+
+$grey-pallette-0: #D8D8D8;
+$grey-pallette-a: #4A4A4A;
+$grey-pallette-b: #5E626B;
+$grey-pallette-c: #2A2B2E;
+
+/*----------------------------*/
+/*Typography - Size*/
+/* These are just default values, stated for modularity. Main usage with base(), heading() and huge() mixins */
+/*----------------------------*/
+
+$base-font-size: 18px !default;
+$base-font-family: "proxima-nova-soft",sans-serif;
+$base-font-weight: 400;
+$base-line-height: 1.5;
+
+$heading-font-size: 250% !default;
+$heading-font-family: "proxima-nova-soft",sans-serif;
+$heading-font-weight: 700;
+$heading-line-height: 1.3;
+
+$title-font-size: 300% !default;
+$title-font-family: "museo-sans-rounded",sans-serif;
+$title-font-weight: 800;
+$title-line-height: 1.3;
+
+/*----------------------------*/
+/*Typography - Default Colors*/
+/*----------------------------*/
+
+$base-color: $grey-pallette-a;
+$heading-color: $dark-pallette-b;
+$title-color: $dark-pallette-c;
+
+/*----------------------------*/
+/*Typography - Link Colors*/
+/*----------------------------*/
+
+$base-link-color: $light-pallette-d;
+$base-hover-link-color: $light-pallette-c;
+$base-disabled-link-color: lighten($grey-pallette-a, 60%);
+
+$heading-link-color: $dark-pallette-b;
+$heading-hover-link-color: $dark-pallette-a;
+$heading-disabled-link-color: lighten($grey-pallette-a, 60%);
+
+$title-link-color: $dark-pallette-c;
+$title-hover-link-color: $dark-pallette-b;
+$title-disabled-link-color: lighten($grey-pallette-a, 60%);

@@ -4,7 +4,11 @@ Style sheet for tafars
 
 */
 
-//Load the site variables
+//The Basics
 @import "../../bower_components/bourbon/dist/_bourbon.scss";
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 @import "base/base";
+
+//App
+@import "core/_layout.scss";
+@import "core/_type.scss";

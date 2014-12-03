@@ -1,0 +1,139 @@
+/*Imports*/
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/*------------------------------*/
+/*Global Layout*/
+/*------------------------------*/
+
+header {
+	background: $light-pallette-d;
+	height: 120px;
+
+	.header-wrap {
+		@include outer-container-margin;
+
+		.header-main {
+			@include span-columns (12 of 12);
+
+			h1 {
+				@include title(250%, 1, 800);
+			};
+
+			img {
+				display: inline;
+				height: 1.5em;
+				margin-left: 0.2em;
+			}
+		}
+	}
+}
+
+.menu {
+	margin-top: 0px;		
+	height: 60px;
+	background: $light-pallette-b;
+}
+
+.menu-wrap {
+	@include outer-container-margin;
+}
+
+.menu-main {
+	@include span-columns (8 of 12);
+	
+	ul { 
+		list-style-type: none;
+		padding-left: 10px;
+	
+		li { 				
+			@include interface-big;
+			@include heading-link;
+			color: $heading-color;
+			display: inline;  
+			margin-right: 20px;
+		}
+	}
+}
+	
+
+
+.main {
+	margin-top: 1em;
+	@include outer-container-margin;	
+}
+
+.content {
+	@include styleguide-section;
+	@include span-columns(8 of 12);
+
+	@include media($tablet) {
+		@include span-columns(12 of 16);
+		@include shift(2);
+	}
+
+	@include media($mobile) {
+		@include span-columns(12 of 12);
+	}
+}
+
+/*------------------------------*/
+/*Sidebar Layout*/
+/*------------------------------*/
+
+aside.sidebar {
+	@include span-columns(4 of 12);
+	
+	@include media($tablet) {
+		@include span-columns(8 of 8);
+	};
+
+	@include media($mobile) {
+		@include span-columns(4 of 4);
+	};
+}
+
+.about {
+	border-radius: 8px;
+	background-color: $light-pallette-c;
+	height: 100%;
+	margin-bottom: 1em;
+	padding: 15px;
+}
+
+.about--title {
+	//@include interface-big;
+	text-align: center;
+}
+
+.about--img {
+	@include fill-parent;
+	margin-top: 10px;
+}
+
+.about--paragraph { };
+
+.share-button {
+	width: 100%;
+	border: none;
+	padding: 10px;
+	color: $light-pallette-a;
+	border-radius: 5px;
+}
+
+.share-button--facebook {
+	background: #306199;
+	color: $light-pallette-a;
+
+	&:hover, &:active {
+		background: #244872;
+		color: $light-pallette-a;
+	}
+}
+
+
+/*------------------------------*/
+/*Footer Layout*/
+/*------------------------------*/
+
+@include sticky-footer(60px);
