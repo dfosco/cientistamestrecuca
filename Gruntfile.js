@@ -90,7 +90,7 @@ module.exports = function (grunt) {
                     middleware: function(connect) {
                         return [
                             connect.static('.tmp'),
-                            connect().use('/bower_components', connect.static('./bower_components')),
+                            connect().use('/app/_bower_components', connect.static('./app/_bower_components')),
                             connect.static(config.app)
                         ];
                     }
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
                         return [
                             connect.static('.tmp'),
                             connect.static('test'),
-                            connect().use('/bower_components', connect.static('./bower_components')),
+                            connect().use('/app/_bower_components', connect.static('./app/_bower_components')),
                             connect.static(config.app)
                         ];
                     }
@@ -161,8 +161,8 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 loadPath: [
-                    'bower_components/bourbon/dist/',
-                    'bower_components/neat/app/assets/stylesheets/'
+                    'app/_bower_components/bourbon/dist/',
+                    'app/_bower_components/neat/app/assets/stylesheets/'
                 ]
             },
             dist: {
